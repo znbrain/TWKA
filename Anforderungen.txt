@@ -1,0 +1,24 @@
+.Net 9 WPF Anwendung
+
+Erstellung einer Solution für mehrere Projekte.
+Klare Trennung zwischen Logik und Oberfläche durch:
+- Verwendung unterschiedlicher Projekte für Backend und Frontend
+- Verwendung des MVVM Patterns für die Realisierung der Oberfläche
+
+Die Anwendung soll ohne Installation lauffähig sein.
+Die Datenhaltung soll in einem SQLite Backend erfolgen. Das Datenverzeichnis soll ein Unterverzeichnis des Anwendungsverzeichnisses sein.
+
+Nach dem Anwendugsstart soll es möglich sein bisherige Wettkämpfe zu laden oder einen neuen Wettkampf anzulegen.
+Datenexport zur übergabe an eine andere Programminstanz
+
+
+
+Wertungen müssen eingetragen werden
+
+Berechnungslogik:
+
+
+Auswertungen:
+- Riegenlisten zur übersicht
+- Wertungsbögen pro Riege und Station für die manuelle Erfassung der Wertungen
+- 
