@@ -1,0 +1,53 @@
+Datenmodell
+
+Wettkampf
+- WettkampfID
+- Name
+- Datum
+
+Durchgang
+- DurchgangID
+- WettkampfID
+- Nummer
+- Bezeichnung
+
+Verein
+- VereinID
+- Name
+- Bezeichnung
+
+Teilnehmer
+- TeilnehmerID
+- VereinID
+- RiegeID
+- Name
+- Vorname
+- Altersklasse
+- Leistungsklasse
+
+Riege
+- RiegeID
+- WettkampfID
+- DurchgangID
+- Nummer
+- Bezeichnung
+
+Gerät
+- GerätID
+- Name
+- Bezeichung
+
+Station
+- StationID
+- GerätID
+- RiegeID
+- Reihenfolge
+- WertungErforderlich
+
+Wertung
+- WertungID
+- StationID
+- TeilnehmerID
+- DWert
+- EWert
+- PWert
