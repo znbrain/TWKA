@@ -1,53 +1,53 @@
 Datenmodell
 
 Wettkampf
-- WettkampfID
-- Name
-- Datum
+- WettkampfID int
+- Name string
+- Datum datetime
 
 Durchgang
-- DurchgangID
+- DurchgangID int
 - WettkampfID
-- Nummer
-- Bezeichnung
+- Nummer smallint
+- Bezeichnung string
 
 Verein
-- VereinID
-- Name
-- Bezeichnung
+- VereinID int
+- Name string
+- Bezeichnung string
 
 Teilnehmer
-- TeilnehmerID
-- VereinID
-- RiegeID
-- Name
-- Vorname
-- Altersklasse
-- Leistungsklasse
+- TeilnehmerID int
+- VereinID int
+- RiegeID int
+- Name string
+- Vorname string
+- Altersklasse string
+- Leistungsklasse string
 
 Riege
-- RiegeID
-- WettkampfID
-- DurchgangID
-- Nummer
-- Bezeichnung
+- RiegeID int
+- WettkampfID int
+- DurchgangID int
+- Nummer smallint
+- Bezeichnung string
 
 Gerät
-- GerätID
-- Name
-- Bezeichung
+- GerätID int
+- Name string
+- Bezeichung string
 
 Station
-- StationID
-- GerätID
-- RiegeID
-- Reihenfolge
-- WertungErforderlich
+- StationID int
+- GerätID int
+- RiegeID int
+- Reihenfolge smallint
+- WertungErforderlich boolean
 
 Wertung
-- WertungID
-- StationID
-- TeilnehmerID
-- DWert
-- EWert
-- PWert
+- WertungID int
+- StationID int
+- TeilnehmerID int
+- DWert decimal
+- EWert decimal
+- PWert decimal
