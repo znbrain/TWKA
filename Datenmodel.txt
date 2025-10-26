@@ -18,14 +18,28 @@ Verein
 - Name string
 - Bezeichnung string
 
+Altersklasse
+- AltersklasseID int
+- WettkampfID int
+- WertungsklasseID int
+- Name string
+- Bezeichnung string
+
+Leistungsklasse
+- LeistungsklasseID int
+- WettkampfID int
+- Name string
+- Bezeichnung string
+
 Teilnehmer
 - TeilnehmerID int
+- WettkampfID int
 - VereinID int
 - RiegeID int
+- AltersklasseID int
+- LeistungsklasseID int
 - Name string
 - Vorname string
-- Altersklasse string
-- Leistungsklasse string
 
 Riege
 - RiegeID int
@@ -37,10 +51,11 @@ Riege
 Gerät
 - GerätID int
 - Name string
-- Bezeichung string
+- Bezeichnung string
 
 Station
 - StationID int
+- WettkampfID int
 - GerätID int
 - RiegeID int
 - Reihenfolge smallint
@@ -48,20 +63,39 @@ Station
 
 Wertung
 - WertungID int
+- WettkampfID int
 - StationID int
 - TeilnehmerID int
-- DWert decimal
-- EWert decimal
-- PWert decimal
+- DWert decimal(2,2)
+- EWert decimal(2,2)
+- PWert decimal(2,2)
+
+Wertungsklasse
+- WertungsklasseID int
+- WettkampfID int
+- Name string
+- Bezeichnung string
+
+
 
 Beziehungen:
-Die BEziehungen sind immer nach dem Schema 1 -> N notiert
+Die Beziehungen sind immer nach dem Schema 1 -> N notiert
 Wettkampf -> Durchgang
 Wettkampf -> Riege
+Wettkampf -> Station
+Wettkampf -> Altersklasse
+Wettkampf -> Leistungsklasse
+Wettkampf -> Wertungsklasse
+Wettkampf -> Teilnehmer
+Wettkampf -> Wertung
 Durchgang -> Riege
+Riege -> Station
 Riege -> Teilnehmer
+Wertungsklasse -> Altersklasse
+Wertungsklasse -> Leistungsklasse
+Altersklasse -> Teilnehmer
+Leistungsklasse -> Teilnehmer
 Verein -> Teilnehmer
-Station -> Riege
-Station -> Gerät
 Teilnehmer -> Wertung
 Station -> Wertung
+Gerät -> Station
