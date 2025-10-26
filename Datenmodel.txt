@@ -1,5 +1,7 @@
-Datenmodell
+Datenmodell:
+Für das Datenmodell soll das EntityFramework verwendet werden. die Klassen sind demnach entsprechend zu erstellen. 
 
+Entitäten:
 Wettkampf
 - WettkampfID int
 - Name string
@@ -7,7 +9,7 @@ Wettkampf
 
 Durchgang
 - DurchgangID int
-- WettkampfID
+- WettkampfID int
 - Nummer smallint
 - Bezeichnung string
 
@@ -51,3 +53,15 @@ Wertung
 - DWert decimal
 - EWert decimal
 - PWert decimal
+
+Beziehungen:
+Die BEziehungen sind immer nach dem Schema 1 -> N notiert
+Wettkampf -> Durchgang
+Wettkampf -> Riege
+Durchgang -> Riege
+Riege -> Teilnehmer
+Verein -> Teilnehmer
+Station -> Riege
+Station -> Gerät
+Teilnehmer -> Wertung
+Station -> Wertung
